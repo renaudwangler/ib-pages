@@ -1,7 +1,7 @@
 /* Gestion de l'ajout du bouton de copie des zones de code */
 function addCopyButton() {
     document.querySelectorAll("code").forEach((codeBlock) => {
-      if (codeBlock.parentElement.tagName.toLowerCase() != 'pre' && navigator.clipboard) {
+      if (navigator.clipboard) {
         copyButton = document.createElement("button");
         copyButton.innerText = '';
         copyButton.className = 'copyBtn';
