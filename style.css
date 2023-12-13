@@ -75,7 +75,7 @@ pre { overflow: auto; padding: 16px; margin: 16px 0 0; direction: ltr; white-spa
 .copyBtn:hover, .copyBtnDone:hover {background: black; }
 .copyBtnDone {background-color:green; opacity: 0.33; }
 .copyBtnDone,.copyBtnDone::before {border-color: green; }
-pre code .copyBtn {position:absolute;right:10px;}
+pre code .copyBtn {position:absolute;right:0px;top:0px}
 li.li_checked::marker { color:lightgreen;font-weight: bolder; }
 
 /* Historique APTS */
