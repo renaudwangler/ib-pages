@@ -1,4 +1,4 @@
-@font-face {font-family: 'Ryker'; src: url('Ryker-Bold.otf')}
+@font-face {font-family: 'Ryker'; src: url('https://github.com/renaudwangler/ib-pages/raw/main/Ryker-Bold.otf')}
 /* Theme principal */
 dl, ol, p, ul { margin-top: 1rem; }
 body { position: relative; }
