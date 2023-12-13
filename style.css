@@ -60,7 +60,7 @@ main .table-striped>tbody>tr:nth-of-type(odd) { background-color: rgba(0, 0, 0, 
 main.extra-padding { padding-bottom: 200px; }
 
 /* Apparence des codes */
-pre code { border: 0; padding: 0; display: inline-flex; }
+pre code { border: 0; padding: 0; display: block; position:relative;width:100%}
 p code { font-size: 0.8rem; }
 code, pre { font-size: .875rem; background-color: #f9f9f9; }
 code { border-radius: 2px; border: 1px solid #d3d6db; display: inline-flex; padding: 0 7px; }
@@ -75,6 +75,7 @@ pre { overflow: auto; padding: 16px; margin: 16px 0 0; direction: ltr; white-spa
 .copyBtn:hover, .copyBtnDone:hover {background: black; }
 .copyBtnDone {background-color:green; opacity: 0.33; }
 .copyBtnDone,.copyBtnDone::before {border-color: green; }
+pre code .copyBtn {position:absolute;right:10px;}
 li.li_checked::marker { color:lightgreen;font-weight: bolder; }
 
 /* Historique APTS */
