@@ -1,4 +1,4 @@
-@font-face {font-family: 'Ryker'; src: url('https://github.com/renaudwangler/ib-pages/raw/main/Ryker-Bold.otf')}
+@font-face {font-family: 'Ryker'; src: url('https://renaudwangler.github.io/ib-pages/Ryker-Bold.otf')}
 /* Theme principal */
 dl, ol, p, ul { margin-top: 1rem; }
 body { position: relative; }
@@ -81,7 +81,6 @@ li.li_checked::marker { color:lightgreen;font-weight: bolder; }
 hr.apts {margin:2em;}
 div.edition {padding:0px;margin:0px;margin-bottom:3px;color:black;font-size:10px;font-weight:normal;padding-left:100px;}
 div#conseilsGeneriques {width:80%;margin-left:10%;margin-top:10px;border-left:double 3px gray;padding:2px;}
-div.apts {white-space:pre-line;}
 div.grey {box-shadow: 0 4px 6px rgb(0 0 0 / 10%);margin:10%;margin-top:10px;margin-bottom:0px;padding:0px;background-color: darkgrey;color:aliceblue;}
 div.grey div:nth-child(1) {padding:10px;}
 div.grey h3 {display:block;width:100%;text-align:left;margin:0px;}
