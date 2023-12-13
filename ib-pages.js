@@ -1,4 +1,4 @@
-//Gestion de l'ajout du bouton de copie des zones de code
+/* Gestion de l'ajout du bouton de copie des zones de code */
 function addCopyButton() {
     document.querySelectorAll("code").forEach((codeBlock) => {
       if (codeBlock.parentElement.tagName.toLowerCase() != 'pre' && navigator.clipboard) {
@@ -14,7 +14,7 @@ async function copyCode(codeBlock) {
     codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
     codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'}
   
-//Gestion du suivi des tâches accomplies dans les ateliers
+/* Gestion du suivi des tâches accomplies dans les ateliers */
 function checkBoxes(lineToCheck) {
     numLine = 0
     stagePath = window.location.pathname.split('/')
@@ -45,7 +45,7 @@ function addLiCheckbox() {
       ligne.addEventListener('click',function(e) { if (e.target.nodeName==='LI') { checkBoxes(this.id) }})
       numLine++})})}
 
-//Gestion des Div pour la liste des APTS
+/* Gestion des Div pour la liste des APTS*/
 function switchDiv(divId,titre) {
     div=document.getElementById(divId);
     if (div.style.display=='none') {
