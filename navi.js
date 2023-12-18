@@ -51,6 +51,4 @@ $(function() {
     header.insertBefore($(this));
     $(this).addClass('mt-0');
 });
-hljs.initHighlightingOnLoad();
-new ClipboardJS('.btn-code');
 });
