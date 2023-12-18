@@ -51,4 +51,5 @@ $(function() {
     header.insertBefore($(this));
     $(this).addClass('mt-0');
 });
+document.querySelector('a.nav-link').classList += ' active';
 });
