@@ -89,7 +89,7 @@ div.grey h3:hover {cursor: pointer;}
 div.grey strong, div.grey b { color:aliceblue;}
 div.grey a,div.grey a:visited {color:darkred;font-weight:bold;}
 div#lastEdit {float:right;margin-right:10px;font-size:small;color:gray;}
-div#stageTitle {width:100%;text-align: center;font-family: 'Ryker'; font-size: large;margin:0px;margin-bottom: 10px;}
+div#stageTitle {width:100%;text-align: center;font-family: 'Ryker'; font-size: large;margin:0px;margin-bottom: 10px;margin-top:110px;}
 #head {font-family: 'Ryker'; font-size: 30px; box-shadow: 0 4px 6px rgb(0 0 0 / 10%);height: 90px;width:100%;position: fixed; top: 0px; left:0px;color:#000;text-decoration: underline;display:block;background:white;margin: 0px;padding-left: 10px;padding-top:10px;}
 #head a:nth-child(1) {display:block; width:100px;height:76px;position:absolute;top:10px;right:20px;}
 #head a:nth-child(2) {display:block;width:24px;height:24px;position: absolute;top:0px;right:130px;}
