@@ -10,10 +10,12 @@ function addCopyButton() {
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => { await copyCode(codeBlock);}); }});}
 async function copyCode(codeBlock) {
-    //await navigator.clipboard.writeText(codeBlock.innerText + "\r\n");
     await navigator.clipboard.writeText(codeBlock.innerText);
     codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
-    codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'}
+    codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)';
+    setTimeout(() => {
+      codeBlock.getElementsByTagName('button')[0].className='copyBtn';
+      codeBlock.getElementsByTagName('button')[0].title = 'Cliquez pour copier ce texte dans votre presse-papier.';}, 10000);}
   
 /* Gestion du suivi des tâches accomplies dans les ateliers */
 function checkBoxes(lineToCheck) {
