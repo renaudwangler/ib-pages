@@ -78,7 +78,7 @@ pre { overflow: auto; padding: 16px; margin: 16px 0 0; direction: ltr; white-spa
 pre code .copyBtn,pre code .copyBtnDone {position:absolute;right:0px;top:0px}
 li.li_unchecked, li.li_checked { counter-increment: line-counter;}
 /* li.li_checked::marker { color:green;font-weight: bolder; } */
-li.li_unchecked::marker {content: "\2610" counter(line-counter) ". "; cursor: pointer;font-weight:bold}
+li.li_unchecked::marker {content: "\2610" counter(list-item) ". "; cursor: pointer;font-weight:bold}
 li.li_checked::marker {content: "\2611" counter(line-counter) ". "; cursor: pointer;font-weight:bold;color: green;}
 /* Historique APTS */
 hr.apts {margin:2em;}
