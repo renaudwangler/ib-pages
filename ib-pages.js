@@ -27,10 +27,12 @@ function checkBoxes(lineToCheck) {
     document.querySelectorAll('ol').forEach((olBlock) => {
       Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
         if (numLine <= lineToCheck) { 
-          ligne.className = 'li_checked'
-          localStorage.setItem(stageName+'-li-'+numLine,'checked') } else { 
-          ligne.className = 'li_unchecked'
-          localStorage.removeItem(stageName+'-li-'+numLine)}
+          if (ligne.className == 'li_unchecked') {
+            ligne.className = 'li_checked'
+            localStorage.setItem(stageName+'-li-'+numLine,'checked') }} else { 
+          if (ligne.className =='li_checked') {
+            ligne.className = 'li_unchecked'
+            localStorage.removeItem(stageName+'-li-'+numLine)}}
         numLine++})})}
 function addLiCheckbox() {
     numLine = 0
