@@ -48,6 +48,9 @@ function addLiCheckbox() {
       ligne.addEventListener('click',function(e) { if (e.target.nodeName==='LI') { checkBoxes(this.id) }})
       numLine++})})}
 
+    /*<input checked="" disabled type="checkbox"></input>
+    /*<input checked="" checked type="checkbox">
+
 /* Gestion des Div pour la liste des APTS*/
 function switchDiv(divId,titre) {
     div=document.getElementById(divId);
