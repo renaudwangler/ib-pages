@@ -50,9 +50,6 @@ function addLiCheckbox() {
       ligne.addEventListener('click',function(e) { if (e.target.nodeName==='LI') { checkBoxes(this.id) }})
       numLine++})})}
 
-    /*<input checked="" disabled type="checkbox"></input>
-    /*<input checked="" checked type="checkbox">
-
 /* Gestion des Div pour la liste des APTS*/
 function switchDiv(divId,titre) {
     div=document.getElementById(divId);
@@ -65,3 +62,47 @@ function switchDiv(divId,titre) {
 function indexLoad() {
     if (localStorage.getItem('ibAPTSlastcourseView') !== undefined) { document.getElementById(localStorage.getItem('ibAPTSlastcourseView')).className='lastCourse';}}
 function stageLoad(pageName) { localStorage.setItem('ibAPTSlastcourseView',pageName); }      
+
+// Export du localStorage vers un fichier JSON
+function exportLocalStorage() {
+    const data = JSON.stringify(localStorage);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = stageName+'ibLocalStorage-save.json';
+    a.click(); 
+    URL.revokeObjectURL(url);}
+
+// Import du JSON dans le localStorage
+function importLocalStorage(file) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        try {
+            const jsonData = JSON.parse(event.target.result);
+            if (typeof jsonData === 'object' && jsonData !== null) {
+                Object.keys(jsonData).forEach(key => {
+                    localStorage.setItem(key, jsonData[key]);
+                });
+                alert('Restauration effectuée avec succès !');
+            } else {
+                alert('Le fichier n\'est pas au format attendu.');}
+        } catch (error) {
+            alert('Erreur lors de la lecture du fichier : ' + error.message);}};
+    reader.readAsText(file);}
+
+
+    /*
+//Le 'input" pour restaurer le fichier :
+
+const fileInput = document.createElement('input');
+fileInput.type = 'file';
+fileInput.accept = 'application/json';
+fileInput.onchange = (event) => {
+    if (event.target.files.length > 0) {
+        importLocalStorage(event.target.files[0]);
+    }
+};
+document.body.appendChild(fileInput);
+
+*/
